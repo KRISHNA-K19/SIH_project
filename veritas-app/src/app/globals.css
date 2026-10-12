@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface-panel: #111622;
+  --color-on-secondary-container: #00374d;
+  --color-surface-dim: #10131a;
+  --color-secondary-container: #00a6e0;
+  --color-on-secondary: #00354a;
+  --color-border-strong: #2D384E;
+  --color-error: #ffb4ab;
+  --color-on-tertiary-fixed-variant: #38485d;
+  --color-on-secondary-fixed-variant: #004c69;
+  --color-surface-base: #07090E;
+  --color-on-surface: #e1e2eb;
+  --color-error-container: #93000a;
+  --color-surface-container-high: #272a31;
+  --color-on-tertiary-container: #000510;
+  --color-tertiary-container: #68788f;
+  --color-border-subtle: #1E2638;
+  --color-outline-variant: #404751;
+  --color-surface-elevated: #181F2E;
+  --color-tertiary: #b7c8e1;
+  --color-status-info: #007ACC;
+  --color-on-tertiary-fixed: #0b1c30;
+  --color-status-critical: #EF4444;
+  --color-on-error-container: #ffdad6;
+  --color-on-secondary-fixed: #001e2c;
+  --color-secondary-fixed-dim: #7bd0ff;
+  --color-surface-tint: #9fcaff;
+  --color-secondary-fixed: #c4e7ff;
+  --color-inverse-on-surface: #2e3037;
+  --color-surface-container-lowest: #0b0e14;
+  --color-on-error: #690005;
+  --color-on-primary-container: #ffffff;
+  --color-background: #10131a;
+  --color-on-primary: #003258;
+  --color-primary: #9fcaff;
+  --color-primary-fixed-dim: #9fcaff;
+  --color-forensic-cyan: #06B6D4;
+  --color-forensic-magenta: #D946EF;
+  --color-tertiary-fixed-dim: #b7c8e1;
+  --color-on-background: #e1e2eb;
+  --color-on-primary-fixed-variant: #00497d;
+  --color-secondary: #7bd0ff;
+  --color-border-active: #007ACC;
+  --color-inverse-surface: #e1e2eb;
+  --color-status-critical-bg: #2A1215;
+  --color-primary-container: #007acc;
+  --color-surface-container: #1d2026;
+  --color-surface: #10131a;
+  --color-status-warning-bg: #2B1E08;
+  --color-surface-container-low: #191c22;
+  --color-surface-container-highest: #32353c;
+  --color-status-info-bg: #0B2238;
+  --color-on-tertiary: #213145;
+  --color-primary-fixed: #d1e4ff;
+  --color-status-success-bg: #092419;
+  --color-tertiary-fixed: #d3e4fe;
+  --color-surface-bright: #363940;
+  --color-inverse-primary: #0061a4;
+  --color-surface-overlay: #1E273A;
+  --color-status-warning: #F59E0B;
+  --color-outline: #8a919d;
+  --color-on-primary-fixed: #001d36;
+  --color-status-success: #10B981;
+  --color-surface-variant: #32353c;
+  --color-on-surface-variant: #c0c7d3;
+  --color-surface-workstation: #0B0E14;
+  --radius-DEFAULT: 0.125rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.5rem;
+  --radius-full: 0.75rem;
+  --spacing-space-xs: 0.25rem;
+  --spacing-space-lg: 1rem;
+  --spacing-space-md: 0.75rem;
+  --spacing-gutter-lg: 1rem;
+  --spacing-margin: 1rem;
+  --spacing-space-2xl: 2rem;
+  --spacing-space-sm: 0.5rem;
+  --spacing-space-2xs: 0.125rem;
+  --spacing-gutter: 0.75rem;
+  --spacing-space-xl: 1.5rem;
+  --spacing-margin-lg: 1.5rem;
+}
+
+@layer base {
+  html, body { margin: 0; padding: 0; }
+  body { overscroll-behavior: none; }
+  main > :first-child { margin-top: 0 !important; }
+  main > :last-child { margin-bottom: 0 !important; }
+}
+
+::-webkit-scrollbar { display: none; }
+
+@layer utilities {
+  .font-headline-lg { font-family: 'Inter', sans-serif; }
+  .text-headline-lg { font-size: 18px; line-height: 24px; letter-spacing: -0.015em; font-weight: 600; }
+  .font-body-sm { font-family: 'Inter', sans-serif; }
+  .text-body-sm { font-size: 12px; line-height: 16px; letter-spacing: 0em; font-weight: 400; }
+  .font-label-lg { font-family: 'Inter', sans-serif; }
+  .text-label-lg { font-size: 13px; line-height: 16px; letter-spacing: 0.01em; font-weight: 600; }
+  .font-headline-md { font-family: 'Inter', sans-serif; }
+  .text-headline-md { font-size: 15px; line-height: 20px; letter-spacing: -0.01em; font-weight: 600; }
+  .font-display-lg { font-family: 'Inter', sans-serif; }
+  .text-display-lg { font-size: 32px; line-height: 38px; letter-spacing: -0.025em; font-weight: 700; }
+  .font-body-lg { font-family: 'Inter', sans-serif; }
+  .text-body-lg { font-size: 14px; line-height: 20px; letter-spacing: -0.005em; font-weight: 400; }
+  .font-label-xs { font-family: 'Inter', sans-serif; }
+  .text-label-xs { font-size: 10px; line-height: 12px; letter-spacing: 0.08em; font-weight: 700; }
+  .font-label-md { font-family: 'Inter', sans-serif; }
+  .text-label-md { font-size: 11px; line-height: 14px; letter-spacing: 0.04em; font-weight: 600; }
+  .font-headline-xl { font-family: 'Inter', sans-serif; }
+  .text-headline-xl { font-size: 24px; line-height: 30px; letter-spacing: -0.02em; font-weight: 600; }
+  .font-code-md { font-family: 'Inter', sans-serif; }
+  .text-code-md { font-size: 12px; line-height: 16px; letter-spacing: 0.02em; font-weight: 500; }
+  .font-body-md { font-family: 'Inter', sans-serif; }
+  .text-body-md { font-size: 13px; line-height: 18px; letter-spacing: 0em; font-weight: 400; }
+}
