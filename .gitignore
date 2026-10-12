@@ -1,0 +1,51 @@
+# Python virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Byte-compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environment files and credentials (never commit secrets)
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# Local SQLite / Temporary databases
+*.db
+*.sqlite3
+
+# Uploaded documents and private file storage
+backend/storage/documents/original/*
+!backend/storage/documents/original/.gitkeep
+backend/storage/documents/processed/*
+!backend/storage/documents/processed/.gitkeep
+storage/documents/original/*
+!storage/documents/original/.gitkeep
+storage/documents/processed/*
+!storage/documents/processed/.gitkeep
+
+# Unit test and coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Node / Next.js (if frontend added to repo)
+node_modules/
+.next/
+out/
+build/
+dist/
+
+# OS and IDE files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
