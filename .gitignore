@@ -1,4 +1,10 @@
-# Dependencies
+# ==========================================
+# VERITAS — Unified Repository .gitignore
+# ==========================================
+
+# ------------------------------------------
+# Frontend (Next.js / Node.js)
+# ------------------------------------------
 node_modules/
 /.pnp
 .pnp.*
@@ -8,45 +14,24 @@ node_modules/
 !.yarn/releases
 !.yarn/versions
 
-# Next.js build and cache
 .next/
 out/
 build/
 dist/
 
-# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 *.log
 
-# Environment variables
-.env
-.env*.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# Operating System Files
-.DS_Store
-Thumbs.db
-desktop.ini
-
-# IDE & Editor files
-.idea/
-.vscode/
-*.swp
-*.swo
-
-# TypeScript cache
 *.tsbuildinfo
 next-env.d.ts
-
-# Vercel
 .vercel/
 
-# Python / AI Backend (for future backend integration)
+# ------------------------------------------
+# Backend (Python / FastAPI / Alembic)
+# ------------------------------------------
 __pycache__/
 *.py[cod]
 *$py.class
@@ -59,3 +44,34 @@ ENV/
 *.egg-info/
 .installed.cfg
 *.egg
+
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local document storage uploads (preserve .gitkeep)
+backend/storage/documents/original/*
+!backend/storage/documents/original/.gitkeep
+backend/storage/documents/processed/*
+!backend/storage/documents/processed/.gitkeep
+
+# ------------------------------------------
+# Environment Variables & Secrets
+# ------------------------------------------
+.env
+.env*.local
+.env.development.local
+.env.test.local
+.env.production.local
+backend/.env
+
+# ------------------------------------------
+# OS & Editor Files
+# ------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
